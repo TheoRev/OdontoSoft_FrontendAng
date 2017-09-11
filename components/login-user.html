@@ -4,7 +4,7 @@
 	<div class="row content">
 		<div class="col-sm-4"></div>
 		<div class="col-sm-6" ng-controller="LoginController">
-			<form action="">
+			<form role="form" ng-submit="ingresar()">
 				<div class="card card-panel">
 					<div class="card-header" style="font-size: 14pt; text-align: center;">
 						<b>INICIE SESION</b>
@@ -12,15 +12,18 @@
 					<div class="card-block">
 						<div class="form-inline">
 							<a href="#"><i class="fa fa-user fa-fw"></i></a>
-							<input type="text" placeholder="Username" class="form-control" style="width: 90%">
+							<input type="text" placeholder="Username" class="form-control" ng-model="user.username" style="width: 90%">
 						</div>
 						<br>
 						<div class="form-inline">
 							<a href="#"><i class="fa fa-unlock-alt fa-fw"></i></a>
-							<input type="password" placeholder="Password" class="form-control" style="width: 90%">
+							<input type="password" placeholder="Password" class="form-control" ng-model="user.password" style="width: 90%">
 						</div>
 						<br>
-						<a href="#" class="btn btn-success btn-block"><i class="fa fa-sign-in fa-fw"></i> INGRESAR</a>
+						<button type="submit" name="btnLogin" class="btn btn-success btn-block">
+							<i class="fa fa-sign-in fa-lg" aria-hidden="true"></i>
+							INGRESAR
+						</button>
 					</div>
 				</div>
 			</form>
